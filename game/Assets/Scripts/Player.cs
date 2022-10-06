@@ -1,0 +1,48 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Player : MonoBehaviour
+{
+    
+    //private int lap=0;
+    public Text PositionCounter;
+    public Text Timer;
+    private int seconds;
+    private int minute;
+    private float milli;
+    private int minuteClock=0;
+    private int milliClock=0;
+    private int secondsClock=0;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        UpdateTimer();
+    }
+
+    public void UpdateTimer(){
+        milli += (Time.deltaTime) * 1000f;
+        milliClock= (int)milli;
+        secondsClock= (int)seconds;
+        minuteClock= (int)minute;
+
+        if(milli >= 1000){
+            seconds++;
+            milli = 0;
+        }else if (seconds >= 60){
+             minute++;
+             seconds = 0;
+        }
+        
+        Timer.text= minuteClock.ToString("00") + ":" + secondsClock.ToString("00") + ":" + milliClock.ToString("00");  
+    }
+
+}
