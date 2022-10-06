@@ -18,7 +18,7 @@ public class shooter : MonoBehaviour
     public float attackRange= 30.0f;
     //bullets
     public GameObject bullet;
-    public GameObject bulletCreate;
+    //public GameObject bulletCreate;
     public float shootingRate=3.0f;
     protected float elapsedTime;
 
@@ -64,10 +64,10 @@ public class shooter : MonoBehaviour
 
         //shoot the bullets
         //turn gun to player
-        if(gun){
+        /**if(gun){
             Quaternion gunRotation = Quaternion.LookRotation(PlayerTransform.position - transform.position);
             gun.transform.rotation= Quaternion.Slerp(gun.transform.rotation, gunRotation, Time.deltaTime * gunSpeed);
-        }
+        }**/
         shooting();
     }
 
@@ -75,8 +75,8 @@ public class shooter : MonoBehaviour
     private void shooting(){
         
         if (elapsedTime >= shootingRate){
-            if ((bulletCreate) & (bullet)){
-                Instantiate(bullet, bulletCreate.transform.position, bulletCreate.transform.rotation);
+            if (bullet){
+                Instantiate(bullet, transform.position, transform.rotation);
             }
         }
         elapsedTime= 0.0f;
