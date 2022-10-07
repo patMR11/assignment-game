@@ -349,13 +349,16 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/bullet.cs"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/CarController.cs"
+"Assets/Scripts/distract.cs"
 "Assets/Scripts/Finish.cs"
 "Assets/Scripts/MainMenu.cs"
-"Assets/Scripts/NewBehaviourScript.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/racer.cs"
 "Assets/Scripts/shooter.cs"
+"Assets/Scripts/waypoint.cs"
 -langversion:9.0
 
 /deterministic
