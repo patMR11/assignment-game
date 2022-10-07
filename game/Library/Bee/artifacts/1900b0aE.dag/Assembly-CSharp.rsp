@@ -352,13 +352,11 @@
 "Assets/Scripts/bullet.cs"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/CarController.cs"
-"Assets/Scripts/distract.cs"
 "Assets/Scripts/Finish.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/racer.cs"
 "Assets/Scripts/shooter.cs"
-"Assets/Scripts/waypoint.cs"
 -langversion:9.0
 
 /deterministic
