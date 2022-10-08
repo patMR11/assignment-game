@@ -20,6 +20,7 @@ public class killer : MonoBehaviour
     public bool attack = true;
     public float attackRange = 100.0f;
     public GameObject bullet;
+    public int health = 100;
     //bullet shooting rate
     public float shootRate = 0.7f;
     protected float elapsedTime;
@@ -91,6 +92,13 @@ public class killer : MonoBehaviour
             elapsedTime = 0.0f;
         }
 
+    }
+
+   
+    //apply damage if hit by bullet
+    public void ApplyDamage(int damage)
+    {
+        health = -damage;
     }
 
 

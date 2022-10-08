@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class destroyer : MonoBehaviour
 {
-    public float lifeTime = 3.0f;
+    public float lifeTime = 2.0f;
     private float elapsedTime;
     // Start is called before the first frame update
 
-    
+
 
     void Start()
     {
@@ -27,3 +27,4 @@ public class destroyer : MonoBehaviour
         elapsedTime += Time.deltaTime;
     }
 }
+

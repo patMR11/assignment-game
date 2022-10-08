@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7210296374322180804}
   - component: {fileID: -2676229905033119711}
   - component: {fileID: 4529120528544456317}
+  - component: {fileID: 5892294589883629483}
   m_Layer: 0
   m_Name: damager
   m_TagString: destroyer
@@ -127,5 +128,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86422d39c0fdba4face91656a9ef2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 3
-  healthText: {fileID: 0}
+  lifeTime: 0.7
+--- !u!65 &5892294589883629483
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4627530929737445192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

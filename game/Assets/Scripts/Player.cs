@@ -18,14 +18,20 @@ public class Player : MonoBehaviour
     private int secondsClock=0;
     public Text healthText;
     private int health = 100;
+    
+   
 
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "destroyer")
         {
-            health -= 20;
+            health -= 10;
             healthText.text = "Health:" + health.ToString();
-            //Debug.Log(final);  
+            if (health == 0)
+            {
+                SceneManager.LoadScene("lose");
+            }
+
         }
     }
 
@@ -40,12 +46,9 @@ public class Player : MonoBehaviour
     {
         //increase timer
         UpdateTimer();
-
+        
         //go to lose screen
-        if (health == 0)
-        {
-            SceneManager.LoadScene("lose");
-        }
+        
     }
 
     public void UpdateTimer(){
@@ -65,4 +68,10 @@ public class Player : MonoBehaviour
         Timer.text= minuteClock.ToString("00") + ":" + secondsClock.ToString("00") + ":" + milliClock.ToString("00");  
     }
 
+
 }
+
+
+
+
+

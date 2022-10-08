@@ -13411,6 +13411,7 @@ MonoBehaviour:
   attack: 1
   attackRange: 100
   bullet: {fileID: 4627530929737445192, guid: 74673402bfed63e4c8091a053f31ff86, type: 3}
+  health: 100
   shootRate: 0.7
   power: 3000
   moveSpeed: 12
@@ -36146,7 +36147,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743953396}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -44892,7 +44893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6903057491385859795, guid: 7c397e2878318dd4badb1271ca9b0f58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 229.2
+      value: 258.5
       objectReference: {fileID: 0}
     - target: {fileID: 6903057491385859795, guid: 7c397e2878318dd4badb1271ca9b0f58, type: 3}
       propertyPath: m_LocalPosition.y

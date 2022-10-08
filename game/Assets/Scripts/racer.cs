@@ -39,7 +39,6 @@ public class racer : MonoBehaviour
     
     protected void IteratePoint(){
         waypointnumber+=1;
-        Debug.Log(waypointnumber);
         if (waypointnumber==waypointList.Length){
             waypointnumber=0;
         }
