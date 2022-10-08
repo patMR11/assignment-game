@@ -25,7 +25,7 @@ public class racer : MonoBehaviour
     void Update()
     {
         
-       if (Vector3.Distance(transform.position, next ) <= 2.0f)
+       if (Vector3.Distance(transform.position, next ) <= 10.0f)
         {
             IteratePoint();
             FindNextPoint();
