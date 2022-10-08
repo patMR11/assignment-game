@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    
-    public float speed= 200.0f;
-    public float lifeTime= 3.0f;
-    private Vector3 newPosition;
+    public float lifeTime= 1.0f;
+    private float elapsedTime;
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, lifeTime);
+       elapsedTime= 0.0f; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        newPosition= transform.position + transform.forward * speed * Time.deltaTime;
+       if(elapsedTime >= lifeTime) {
+              Destroy(this.gameObject);
+       }
+       elapsedTime += Time.deltaTime;
     }
 }
