@@ -20,7 +20,7 @@ public class enemy : MonoBehaviour
     public float attackRange= 100.0f;
     public GameObject bullet;
     //bullet shooting rate
-    public float shootRate= 1.0f;
+    public float shootRate= 0.3f;
     protected float elapsedTime;
     public float power= 3000.0f;
     public float moveSpeed= 12.0f;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -15,6 +16,18 @@ public class Player : MonoBehaviour
     private int minuteClock=0;
     private int milliClock=0;
     private int secondsClock=0;
+    public Text healthText;
+    private int health = 100;
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "destroyer")
+        {
+            health -= 20;
+            healthText.text = "Health:" + health.ToString();
+            //Debug.Log(final);  
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +38,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //increase timer
         UpdateTimer();
+
+        //go to lose screen
+        if (health == 0)
+        {
+            SceneManager.LoadScene("lose");
+        }
     }
 
     public void UpdateTimer(){
