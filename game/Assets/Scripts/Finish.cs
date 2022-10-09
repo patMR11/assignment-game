@@ -19,7 +19,7 @@ public class Finish : MonoBehaviour
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.tag == "wheel") {
 			lap+=1;
-            scoreText.text="Lap:"+lap.ToString()+"/3";
+            scoreText.text="Lap:"+lap.ToString()+"/2";
             //Debug.Log(final);  
 		}
 	}
@@ -32,7 +32,7 @@ public class Finish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lap==3){
+        if (lap==2){
             //Debug.Log("hello");
             SceneManager.LoadScene("ending");
         }
