@@ -15,7 +15,7 @@ public class killer : MonoBehaviour
 
     public FSMState curState;
     protected Transform PlayerTransform;
-
+    public AudioSource shot;
     //attacks
     public bool attack = true;
     public float attackRange = 100.0f;
@@ -88,6 +88,7 @@ public class killer : MonoBehaviour
                 GameObject instance = Instantiate(bullet, transform.position, transform.rotation) as GameObject;
                 Vector3 fwd = transform.TransformDirection(Vector3.forward);
                 instance.GetComponent<Rigidbody>().AddForce(fwd * power);
+                shot.Play();
             }
             elapsedTime = 0.0f;
         }
